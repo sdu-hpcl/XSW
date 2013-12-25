@@ -1,11 +1,11 @@
-# swmic
+# Xsw
 *   A fast Smith-Waterman Algorithm Implementation on Intel Xeon Phi Coprocessors.
 
 ## Introduction
-* SWMIC is a fast implementation of Smith-Waterman algorithm performed on the Intel(R) MIC platform. We achieved a speed of 68.3G CUPS (cell update per second) on a single Xeon Phi 7110p in native mode and 98G CUPS on a E5-2620 CPU with one Xeon Phi 7110p in offload mode processing query P58299 with database env-nr_FASTA. Large databases like nr(19G) are supported at about 90 GCUPS using fast external storage devices(e.g. SSD).
+* Xsw is a fast implementation of Smith-Waterman algorithm performed on the Intel(R) MIC platform. We achieved a speed of 70G CUPS (cell update per second) on a single Xeon Phi 7110p in native mode and 98G CUPS on a E5-2620 CPU with one Xeon Phi 7110p in offload mode processing query P58299 with database env-nr_FASTA. Large databases like nr(19G) are supported at about 90 GCUPS using fast external storage devices(e.g. SSD).
 
 ##Installation and Usage
-* Three files must be provided to run swmic: the scoring matrix, query sequence and the database. The query sequence and database should be in FASTA format.
+* Three files must be provided to run Xsw: the scoring matrix, query sequence and the database. The query sequence and database should be in FASTA format.
 For example, steps to run the query testRefSeq0511.txt to the database db.env_nr with the default gap penalties and scoring matrix are as following:
 
 ** For native version: **
@@ -18,15 +18,15 @@ For example, steps to run the query testRefSeq0511.txt to the database db.env_nr
     
 * Step 2: Upload the database and program to xeon phi:
 
-    `./scp db.env_nr.* blosum62.mat testRef* swmic.mic mic0:`
+    `./scp db.env_nr.* blosum62.mat testRef* Xsw.mic mic0:`
 
 * Step 3: Login xeon phi card:
 
     `./ssh mic0`
     
-* Step 4: Run swmic on xeon phi:
+* Step 4: Run Xsw on xeon phi:
 
-    `./swmic.mic blosum62.mat testRefSeq0511.txt db.env_nr`
+    `./Xsw.mic blosum62.mat testRefSeq0511.txt db.env_nr`
 
 ** For offload version: **
 
@@ -34,9 +34,9 @@ For example, steps to run the query testRefSeq0511.txt to the database db.env_nr
 
     `./makemicdb4.1.out db.env_nr`
     
-* Step 2: Run swmic:
+* Step 2: Run Xsw:
 
-    `./swmic.mic blosum62.mat testRefSeq1023.txt db.env_nr`
+    `./Xsw.mic blosum62.mat testRefSeq1023.txt db.env_nr`
 
 ##Reference
 
