@@ -81,11 +81,11 @@ header h1 {
 }
 
 header h2 {
-  font-size: 26px;
+  font-size: 18px;
   color: #9ddcff;
   font-weight: normal;
   line-height: 1.3;
-  width: 540px;
+  width: 700px;
   letter-spacing: 0;
 }
 
@@ -325,12 +325,12 @@ blockquote {
   padding: 0 0 0 30px;
 }
 
-ul {
+ul li {
   list-style: disc inside;
   padding-left: 20px;
 }
 
-ol {
+ol li {
   list-style: decimal inside;
   padding-left: 3px;
 }
