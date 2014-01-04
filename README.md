@@ -2,13 +2,12 @@
 *   A fast Smith-Waterman Algorithm Implementation on Intel Xeon Phi Coprocessors.
 
 ## Introduction
-* XSW is a fast implementation of Smith-Waterman algorithm performed on the Intel(R) MIC platform. We achieved a speed of 70G CUPS (cell update per second) on a single Xeon Phi 7110p in native mode and 98G CUPS on a E5-2620 CPU with one Xeon Phi 7110p in offload mode processing query P58299 with database env-nr_FASTA. Large databases like nr(19G) are supported at about 90 GCUPS using fast external storage devices(e.g. SSD).
+* XSW is a fast implementation of Smith-Waterman algorithm performed on the Intel(R) MIC platform. We achieved a speed of 70G CUPS (cell update per second) on a single Xeon Phi 7110p in native mode.
 
 ##Installation and Usage
 * Three files must be provided to run XSW: the scoring matrix, query sequence and the database. The query sequence and database should be in FASTA format.
 For example, steps to run the query testRefSeq0511.txt to the database db.env_nr with the default gap penalties and scoring matrix are as following:
 
-** For native version: **
 
 * Step 1: Preproccess the database:
  
@@ -28,15 +27,7 @@ For example, steps to run the query testRefSeq0511.txt to the database db.env_nr
 
     `./XSW.mic blosum62.mat testRefSeq0511.txt db.env_nr`
 
-** For offload version: **
 
-* Step 1: Preproccess the database:
-
-    `./makemicdb4.1.out db.env_nr`
-    
-* Step 2: Run XSW:
-
-    `./XSW.mic blosum62.mat testRefSeq1023.txt db.env_nr`
 
 ##Reference
 
