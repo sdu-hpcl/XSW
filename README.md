@@ -52,3 +52,7 @@ For example, steps to run the query testRefSeq0511.txt to the database db.env_nr
 ##Support or Contact
 * If you have any questions, please contact: **Weiguo,Liu** ( *weiguo.liu@sdu.edu.cn*).
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/sdu-hpcl/xsw/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
