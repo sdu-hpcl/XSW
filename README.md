@@ -17,15 +17,15 @@ For example, steps to run the query testRefSeq0511.txt to the database db.env_nr
     
 * Step 2: Upload the database and program to xeon phi:
 
-    `./scp db.env_nr.* blosum62.mat testRef* XSW.mic mic0:`
+    `scp db.env_nr*.* blosum62.mat testRef* XSW mic0:`
 
 * Step 3: Login xeon phi card:
 
-    `./ssh mic0`
+    `ssh mic0`
     
 * Step 4: Run XSW on xeon phi:
 
-    `./XSW.mic blosum62.mat testRefSeq0511.txt db.env_nr`
+    `./XSW blosum62.mat testRefSeq0511.txt db.env_nr`
 
 
 
@@ -34,11 +34,9 @@ For example, steps to run the query testRefSeq0511.txt to the database db.env_nr
 * ** Paper is under submission.**
 
 ##Authors and Contributors
-* Author 1
 
-* Author 2
-   
-* Author 3
+* Lipeng Wang, Yuandong Chan, Xiaohui Duan, Haidong Lan, Xiangxu Meng, and Weiguo Liu
+
 
 ##Support or Contact
 * If you have any questions, please contact: **Weiguo,Liu** ( *weiguo.liu@sdu.edu.cn*).
