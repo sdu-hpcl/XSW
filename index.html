@@ -35,8 +35,9 @@
                 <a class="anchor"><span
                         class="octicon octicon-link"></span></a>Introduction</h3>
 
-            <p><b>XSW</b> is a fast implementation of Smith-Waterman algorithm performed on the Intel(R) MIC platform.
-                We achieved a speed of 70G CUPS (cell update per second) on a single Xeon Phi 7110p in native mode.
+            <p><b>XSW</b> is a fast implementation of Smith-Waterman algorithm performed on the Intel(R) MIC platform. 
+                 We achieved a speed of 70G CUPS (cell update per second) on a single Xeon Phi 7110p in native mode and 
+                 100G CUPS on a E5-2620 CPU with one Xeon Phi 7110p in offload mode processing query P58299 with database env-nr_FASTA. 
             </p>
 
             <h3>
@@ -64,7 +65,7 @@
                 with the default gap penalties and scoring matrix are as following:
                 <br>
 
-           <!-- <li>For now version:</li> -->
+            <li>For native version:</li> 
             <br>
             Step 1: Preproccess the database:
             <br>
@@ -85,6 +86,17 @@
             <code>./XSW blosum62.mat testRefSeq0511.txt db.env_nr</code>
             <br>
             <br>
+            <li>For offload version:</li>
+            <br>
+            Step 1: Preproccess the database:
+            <br>
+            <code>./makemicdb4.1.out db.env_nr</code>
+            <br>
+            Step 2: Run XSW:
+            <br>
+            <code>./XSW blosum62.mat testRefSeq0511.txt db.env_nr</code>
+            </p>
+
 
             <h3>
                 <a class="anchor"><span
@@ -97,9 +109,7 @@
                         class="octicon octicon-link"></span></a>Authors and Contributors</h3>
 
             <p>
-            <li>Lipeng Wang, Yuandong Chan, Xiaohui Duan, Haidong Lan, Xiangxu Meng, and Weiguo Liu*</li><br>
-            <font size="1">*Weiguo Liu is the corresponding author.</font>
-
+            <li>Weiguo Liu is the corresponding author.</li><br>
             </p>
 
             <h3>
