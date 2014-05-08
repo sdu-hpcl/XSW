@@ -80,6 +80,10 @@ header h1 {
   width: 540px;
 }
 
+#version{
+    font-size:30%
+}
+
 header h2 {
   font-size: 18px;
   color: #9ddcff;

@@ -13,13 +13,13 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title>XSW - A fast Smith-Waterman Algorithm Implementation on Intel Xeon Phi Coprocessors.</title>
+    <title>XSW 2.0 - A fast Smith-Waterman Algorithm Implementation on Intel Xeon Phi Coprocessors.</title>
 </head>
 
 <body>
 <header>
     <div class="inner">
-        <h1>XSW</h1>
+        <h1>XSW <em id="version">Ver 2.0</em></h1>
 
         <h2>A fast Smith-Waterman Algorithm Implementation on Intel Xeon Phi Coprocessors.</h2>
         <a href="https://github.com/sdu-hpcl/XSW" class="button">
@@ -35,9 +35,13 @@
                 <a class="anchor"><span
                         class="octicon octicon-link"></span></a>Introduction</h3>
 
-            <p><b>XSW</b> is a fast implementation of Smith-Waterman algorithm performed on the Intel(R) MIC platform. 
-                 We achieved a speed of 70G CUPS (cell update per second) on a single Xeon Phi 7110p in native mode and 
-                 100G CUPS on a E5-2620 CPU with one Xeon Phi 7110p in offload mode. 
+            <p><b>XSW</b> is a new parallel Smith-Waterman algorithm for searching large-scale biological
+                sequence databases on the Xeon Phi-based neo-heterogenous architecture.
+            </p>
+            <p>
+                Evaluations on real protein sequence databases shows that XSW achieves the peak performance of 70 and
+                100 GCUPS on a single Intel Xeon Phi 7110p card and a hybrid CPU-Xeon Phi platform(Xeon Phi 7110p+E5-2620) respectively.
+
             </p>
 
             <h3>
@@ -69,7 +73,7 @@
             <br>
             Step 1: Preproccess the database:
             <br>
-            <code> ./makemicdb.out db.env_nr 244 </code>
+         <code> ./makemicdb.out db.env_nr 244 </code>
             <br>
             [NOTE:] if your Xeon Phi has 61 cores, it is 244, if 60 cores it is 240.
             <br>
@@ -100,16 +104,11 @@
 
             <h3>
                 <a class="anchor"><span
-                        class="octicon octicon-link"></span></a>Reference</h3>
+                        class="octicon octicon-link"></span></a>Papers</h3>
 
-            <p>Paper is under submission.</p>
-
-            <h3>
-                <a class="anchor"><span
-                        class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-            <p>
-            <li>Weiguo Liu is the corresponding author.</li><br>
+            <p>XSW: Accelerating Biological Database Search on Xeon Phi<br>
+                The 28th IEEE International Parallel & Distributed Processing Symposium (IPDPS 2014), Phoenix,USA,
+                May, 2014.
             </p>
 
             <h3>
